@@ -248,43 +248,32 @@ const Sidebar = (props) => {
                     <span className="menu-side">
                       <img src={menuicon04} alt="" />
                     </span>{" "}
-                    <span> Appointments </span> <span className="menu-arrow" />
+                    <span>Landing Page</span> <span className="menu-arrow" />
                   </Link>
                   <ul style={{ display: "none" }} className="menu-items4">
                     <li>
                       <Link
                         className={
-                          props?.activeClassName === "appoinment-list"
+                          props?.activeClassName === "heroSection"
                             ? "active"
                             : ""
                         }
-                        to="/appoinmentlist"
+                        to="/herosection"
                       >
-                        Appointment List
+                Hero Section 
                       </Link>
                     </li>
+                    
                     <li>
                       <Link
                         className={
-                          props?.activeClassName === "add-appoinment"
+                          props?.activeClassName === "edit-heroSection"
                             ? "active"
                             : ""
                         }
-                        to="/addappoinments"
+                        to="/editherosection"
                       >
-                        Add Appointment
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "edit-appoinment"
-                            ? "active"
-                            : ""
-                        }
-                        to="/editappoinments"
-                      >
-                        Edit Appointment
+                        Edit Hero Section
                       </Link>
                     </li>
                   </ul>

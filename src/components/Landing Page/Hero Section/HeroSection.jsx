@@ -1,17 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React,{ useState } from 'react'
 import { Table } from "antd";
-import Header from '../Header';
-import Sidebar from '../Sidebar';
+import Header from '../../Header';
+import Sidebar from '../../Sidebar';
 import { blogimg10, imagesend, pdficon, pdficon3, pdficon4, plusicon, refreshicon, searchnormal, blogimg12,
      blogimg2, blogimg4, blogimg6, blogimg8,
-     backgroundImg} from '../imagepath';
-import {onShowSizeChange,itemRender}from  '../Pagination'
+     backgroundImg} from '../../imagepath';
+import {onShowSizeChange,itemRender}from  '../../Pagination'
 import { Link } from 'react-router-dom';
 import FeatherIcon from 'feather-icons-react/build/FeatherIcon';
 
 
-const AppoinmentList = () => {
+const HeroSection = () => {
 
     const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 
@@ -97,7 +97,7 @@ const AppoinmentList = () => {
                     <i className="fas fa-ellipsis-v" />
                   </Link>
                   <div className="dropdown-menu dropdown-menu-end">
-                    <Link className="dropdown-item" to="/editappoinments">
+                    <Link className="dropdown-item" to="/editherosection">
                       <i className="far fa-edit me-2" />
                       Edit
                     </Link>
@@ -116,7 +116,7 @@ const AppoinmentList = () => {
   return (
     <>
     <Header />
-    <Sidebar id='menu-item4' id1='menu-items4' activeClassName='appoinment-list'/>
+    <Sidebar id='menu-item4' id1='menu-items4' activeClassName='heroSection'/>
     <>
   <div className="page-wrapper">
     <div className="content">
@@ -260,5 +260,5 @@ const AppoinmentList = () => {
   )
 }
 
-export default AppoinmentList;
+export default HeroSection;
 

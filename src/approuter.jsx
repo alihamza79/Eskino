@@ -14,18 +14,27 @@ import SettingsChangePassword from "./components/settings/SettingsChangePassword
 //Meeting
 import AddMeeting from "./components/meeting/AddMeeting";
 import EditMeeting from "./components/meeting/EditMeeting";
-import MeetingList from "./components/meeting/MeetingList";
-//Participents...
-import ParticipentList from "./components/participent/ParticipentList";
-import AddAppoinments from "./components/appoinments/AddAppoinments";
+//Patients...
+import ParticipentList from "./components/patients/ParticipentList";
+// import AddPatients from "./components/patients/AddPatients";
+import EditParticipent from "./components/patients/EditParticipent";
 import AppoinmentList from "./components/appoinments/AppoinmentList";
+import AddAppoinments from "./components/appoinments/AddAppoinments";
 import EditAppoinments from "./components/appoinments/EditAppoinments";
-import EditParticipent from "./components/participent/EditParticipent";
+//DoctorSchedule
+import ScheduleList from "./components/doctorschedule/ScheduleList";
 
-import AddAdmin from "./components/Admin/Add-Admin";
-import AdminList from "./components/Admin/AdminList";
-import EditAdmin from "./components/Admin/EditAdmin";
+import AddSchedule from "./components/doctorschedule/AddSchedule";
+import EditSchedule from "./components/doctorschedule/EditSchedule";
+//Departments
+import DepartmentList from "./components/department/DepartmentList";
+import AddDepartment from "./components/department/AddDepartment";
+import EditDepartment from "./components/department/EditDepartment";
+import AdminList from "./components/staff/AdminList";
+import AddAdmin from "./components/staff/Add-Admin";
+import EditAdmin from "./components/staff/EditAdmin";
 
+import ProvidentFund from "./components/accounts/ProvidentFund";
 import ForgotPassword from "./components/pages/login/ForgotPassword";
 import Signup from "./components/pages/login/Signup";
 
@@ -81,8 +90,15 @@ const Approuter = () => {
           <Route path="/appoinmentlist" element={<AppoinmentList />} />
           <Route path="/addappoinments" element={<AddAppoinments />} />
           <Route path="/editappoinments" element={<EditAppoinments />} />
-
-          {/* Admin */}
+          {/* DoctorSchedule */}
+          <Route path="/schedulelist" element={<ScheduleList />} />
+          <Route path="/addschedule" element={<AddSchedule />} />
+          <Route path="/editschedule" element={<EditSchedule />} />
+          {/* Department */}
+          <Route path="/departmentlist" element={<DepartmentList />} />
+          <Route path="/add-department" element={<AddDepartment />} />
+          <Route path="/editdepartment" element={<EditDepartment />} />
+          {/* Staff */}
           <Route path="/adminlist" element={<AdminList />} />
           <Route path="/addadmin" element={<AddAdmin />} />
           <Route path="/editadmin" element={<EditAdmin />} />
