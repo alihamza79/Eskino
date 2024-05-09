@@ -50,6 +50,7 @@ Version      : 1.0
 41. Gallery
 42. Settings
 43. Responsive
+44. Landing Page
 
 ========================================*/
 
@@ -11196,3 +11197,15 @@ tr.ant-table-row.ant-table-row-level-0.ant-table-row-selected,
   top: 26%;
 
 }
+
+
+/* Landing Page */
+.multiline-text {
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+  max-width: 100px; /* Adjust as needed */
+  line-height: 1.2; /* Adjust line height as needed */
+}
+
+
