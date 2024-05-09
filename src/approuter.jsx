@@ -44,8 +44,8 @@ import EditSchedule from "./components/doctorschedule/EditSchedule";
 import DepartmentList from "./components/department/DepartmentList";
 import AddDepartment from "./components/department/AddDepartment";
 import EditDepartment from "./components/department/EditDepartment";
-import StaffList from "./components/staff/StafList";
-import AddStaff from "./components/staff/Add-Staff";
+import AdminList from "./components/staff/AdminList";
+import AddAdmin from "./components/staff/Add-Admin";
 import StaffProfile from "./components/staff/StaffProfile";
 import ProvidentFund from "./components/accounts/ProvidentFund";
 import ForgotPassword from "./components/pages/login/ForgotPassword";
@@ -198,8 +198,8 @@ const Approuter = () => {
           <Route path="/add-department" element={<AddDepartment />} />
           <Route path="/editdepartment" element={<EditDepartment />} />
           {/* Staff */}
-          <Route path="/stafflist" element={<StaffList />} />
-          <Route path="/addstaff" element={<AddStaff />} />
+          <Route path="/adminlist" element={<AdminList />} />
+          <Route path="/addadmin" element={<AddAdmin />} />
           <Route path="/editstaff" element={<EditStaff />} />
           <Route path="/staffprofile" element={<StaffProfile />} />
           <Route path="/leave" element={<Leave />} />

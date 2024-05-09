@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Table, Modal, Button } from "antd";
 import { Link } from "react-router-dom";
@@ -11,142 +12,98 @@ import {
   blogimg2,
 } from "../imagepath";
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
-const datasource = [
-  {
-    id: 1,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 2,
-    Img: blogimg2,
-    Name: "Ali",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 3,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 4,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 5,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 6,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 7,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 8,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 9,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 10,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-  {
-    id: 11,
-    Img: blogimg2,
-    Name: "Meeting 1",
-    StartTime: "10:00:00",
-    EndTime: "12:00:00",
-    Participent: 10,
-    Capacity: "25",
-    Location: "Islamabad",
-    StartDate: "01.10.2022",
-    FIELD9: "",
-  },
-];
+const AdminList = () => {
+  const datasource = [
+    {
+      id: 1,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 2,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 3,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 4,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 5,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 6,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 7,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 8,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 9,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 10,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+    {
+      id: 11,
+      Img: blogimg2,
+      Name: "Meeting 1",
+      Email: "10:00:00",
+      Password: "1234",
+      FIELD9: "",
+    },
+  ];
 
-const MeetingList = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMeeting, setSelectedMeeting] = useState({});
 
@@ -172,28 +129,13 @@ const MeetingList = () => {
       sorter: (a, b) => a.Name.length - b.Name.length,
     },
     {
-      title: "StartTime",
-      dataIndex: "StartTime",
-      sorter: (a, b) => a.StartTime.length - b.StartTime.length,
+      title: "Email",
+      dataIndex: "Email",
+      sorter: (a, b) => a.Email.length - b.Email.length,
     },
     {
-      title: "EndTime",
-      dataIndex: "EndTime",
-      sorter: (a, b) => a.EndTime.length - b.EndTime.length,
-    },
-    {
-      title: "Participent",
-      dataIndex: "Participent",
-      sorter: (a, b) => a.Participent - b.Participent,
-    },
-    {
-      title: "",
-      dataIndex: "actions",
-      render: (_, record) => (
-        <Button className="btn btn-primary" onClick={() => showModal(record)}>
-          View Details
-        </Button>
-      ),
+      title: "Password",
+      dataIndex: "Password",
     },
     {
       title: "",
@@ -235,8 +177,8 @@ const MeetingList = () => {
     <>
       <Header />
       <Sidebar
-        id="menu-item1"
-        id2="menu-item1"
+        id="menu-item3"
+        id2="menu-item3"
         activeClassName="meeting-list"
       />
       <div className="page-wrapper">
@@ -246,14 +188,14 @@ const MeetingList = () => {
               <div className="col-sm-12">
                 <ul className="breadcrumb">
                   <li className="breadcrumb-item">
-                    <Link to="#">Meetings</Link>
+                    <Link to="#">Admins</Link>
                   </li>
                   <li className="breadcrumb-item">
                     <i className="feather-chevron-right">
                       <FeatherIcon icon="chevron-right" />
                     </i>
                   </li>
-                  <li className="breadcrumb-item active">Meetings List</li>
+                  <li className="breadcrumb-item active">Admins List</li>
                 </ul>
               </div>
             </div>
@@ -268,7 +210,7 @@ const MeetingList = () => {
                     <div className="row align-items-center">
                       <div className="col">
                         <div className="doctor-table-blk">
-                          <h3>Meeting List</h3>
+                          <h3>Admins List</h3>
                           <div className="doctor-search-blk">
                             <div className="top-nav-search table-search-blk">
                               <form>
@@ -312,56 +254,6 @@ const MeetingList = () => {
                             dataSource={datasource}
                             rowKey="id"
                           />
-                          {isModalOpen && (
-                            <Modal
-                              title="Meeting Details"
-                              open={isModalOpen}
-                              onOk={handleOk}
-                              onCancel={handleCancel}
-                              footer={[
-                                <Button key="close" onClick={handleCancel}>
-                                  Close
-                                </Button>,
-                                <Button
-                                  key="ok"
-                                  onClick={handleOk}
-                                  type="primary"
-                                >
-                                  OK
-                                </Button>,
-                              ]}
-                            >
-                              <p>
-                                <strong>Name:</strong> {selectedMeeting.Name}
-                              </p>
-                              <p>
-                                <strong>Start Time:</strong>{" "}
-                                {selectedMeeting.StartTime}
-                              </p>
-                              <p>
-                                <strong>End Time:</strong>{" "}
-                                {selectedMeeting.EndTime}
-                              </p>
-                              <p>
-                                <strong>Participent:</strong>{" "}
-                                {selectedMeeting.Participent}
-                              </p>
-
-                              <p>
-                                <strong>Capacity:</strong>{" "}
-                                {selectedMeeting.Capacity}
-                              </p>
-                              <p>
-                                <strong>Location:</strong>{" "}
-                                {selectedMeeting.Location}
-                              </p>
-                              <p>
-                                <strong>Start Date:</strong>{" "}
-                                {selectedMeeting.StartDate}
-                              </p>
-                              {/* Add more details if needed */}
-                            </Modal>
-                          )}
                           <div
                             id="delete_patient"
                             className="modal fade delete-modal"
@@ -411,4 +303,4 @@ const MeetingList = () => {
   );
 };
 
-export default MeetingList;
+export default AdminList;

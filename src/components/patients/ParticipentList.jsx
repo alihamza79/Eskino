@@ -16,6 +16,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Male",
       FIELD9: "",
     },
     {
@@ -27,6 +28,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Male",
       FIELD9: "",
     },
     {
@@ -38,6 +40,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Male",
       FIELD9: "",
     },
     {
@@ -49,6 +52,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Male",
       FIELD9: "",
     },
     {
@@ -60,6 +64,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Female",
       FIELD9: "",
     },
     {
@@ -71,6 +76,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Female",
       FIELD9: "",
     },
     {
@@ -82,6 +88,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Female",
       FIELD9: "",
     },
     {
@@ -93,6 +100,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Female",
       FIELD9: "",
     },
     {
@@ -104,6 +112,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Female",
       FIELD9: "",
     },
     {
@@ -115,6 +124,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Female",
       FIELD9: "",
     },
     {
@@ -126,6 +136,7 @@ const ParticipantList = () => {
       AddressOwner: "nsdseid",
       Personnals: 4,
       NameOfParticipents: "Ali , Hamza",
+      Gender: "Female",
       FIELD9: "",
     },
   ];
@@ -281,8 +292,13 @@ const ParticipantList = () => {
                         <strong>Owner Address:</strong>{" "}
                         {selectedParticipant.AddressOwner}
                       </p>
+                      <p>
+                        <strong>Gender:</strong> {selectedParticipant.Gender}
+                      </p>{" "}
+                      {/* Display Gender here */}
                     </Modal>
                   )}
+
                   <div
                     id="delete_patient"
                     className="modal fade delete-modal"

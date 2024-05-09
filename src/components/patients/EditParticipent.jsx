@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
-import Header from '../Header';
-import Sidebar from '../Sidebar';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import Header from "../Header";
+import Sidebar from "../Sidebar";
+import { Link } from "react-router-dom";
 
 const EditParticipant = () => {
   const initialParticipantData = {
     id: 1,
-    img: 'blogimg2',
-    firstName: 'Participant',
-    lastName: '1',
-    email: 'participant@gmail.com',
-    addressOwner: 'nsdseid',
+    img: "blogimg2",
+    firstName: "Participant",
+    lastName: "1",
+    email: "participant@gmail.com",
+    addressOwner: "nsdseid",
     personals: 4,
-    nameOfParticipants: 'Ali, Hamza',
+    nameOfParticipants: "Ali, Hamza",
+    gender: "Male",
   };
 
-  const [participantData, setParticipantData] = useState(initialParticipantData);
+  const [participantData, setParticipantData] = useState(
+    initialParticipantData
+  );
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -33,11 +36,18 @@ const EditParticipant = () => {
     let newErrors = {};
 
     // Required field validation
-    const requiredFields = ['firstName', 'lastName', 'email', 'addressOwner', 'personals', 'nameOfParticipants'];
-    requiredFields.forEach(field => {
+    const requiredFields = [
+      "firstName",
+      "lastName",
+      "email",
+      "addressOwner",
+      "personals",
+      "nameOfParticipants",
+    ];
+    requiredFields.forEach((field) => {
       if (!participantData[field]) {
         isValid = false;
-        newErrors[field] = 'This field is required';
+        newErrors[field] = "This field is required";
       }
     });
 
@@ -91,7 +101,11 @@ const EditParticipant = () => {
                         value={participantData.firstName}
                         onChange={handleChange}
                       />
-                      {errors.firstName && <div className="error text-danger">{errors.firstName}</div>}
+                      {errors.firstName && (
+                        <div className="error text-danger">
+                          {errors.firstName}
+                        </div>
+                      )}
                     </div>
 
                     <div className="form-group">
@@ -103,7 +117,11 @@ const EditParticipant = () => {
                         value={participantData.lastName}
                         onChange={handleChange}
                       />
-                      {errors.lastName && <div className="error text-danger">{errors.lastName}</div>}
+                      {errors.lastName && (
+                        <div className="error text-danger">
+                          {errors.lastName}
+                        </div>
+                      )}
                     </div>
 
                     <div className="form-group">
@@ -115,7 +133,9 @@ const EditParticipant = () => {
                         value={participantData.email}
                         onChange={handleChange}
                       />
-                      {errors.email && <div className="error text-danger">{errors.email}</div>}
+                      {errors.email && (
+                        <div className="error text-danger">{errors.email}</div>
+                      )}
                     </div>
 
                     <div className="form-group">
@@ -150,9 +170,46 @@ const EditParticipant = () => {
                         onChange={handleChange}
                       />
                     </div>
+                    <div className="form-group">
+                      <label>Gender</label>
+                      <div className="d-flex align-items-center">
+                        <div className="form-check form-check-inline">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="gender"
+                            id="male"
+                            value="Male"
+                            checked={participantData.gender === "Male"}
+                            onChange={handleChange}
+                          />
+                          <label className="form-check-label" htmlFor="male">
+                            Male
+                          </label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="gender"
+                            id="female"
+                            value="Female"
+                            checked={participantData.gender === "Female"}
+                            onChange={handleChange}
+                          />
+                          <label className="form-check-label" htmlFor="female">
+                            Female
+                          </label>
+                        </div>
+                      </div>
+                    </div>
 
-                    <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
-                      {isSubmitting ? 'Submitting...' : 'Submit'}
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Submit"}
                     </button>
                   </form>
                 </div>
