@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
 import { Link } from "react-router-dom";
+import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 
 const EditAdmin = () => {
   const initialAdminData = {
@@ -65,9 +66,14 @@ const EditAdmin = () => {
               <div className="col-sm-12">
                 <ul className="breadcrumb">
                   <li className="breadcrumb-item">
-                    <Link to="#">Staffs </Link>
+                    <Link to="/adminlist">Admins </Link>
                   </li>
-                  <li className="breadcrumb-item active">Edit Staff</li>
+                  <li className="breadcrumb-item">
+                    <i className="feather-chevron-right">
+                      <FeatherIcon icon="chevron-right" />
+                    </i>
+                  </li>
+                  <li className="breadcrumb-item active">Edit Admin</li>
                 </ul>
               </div>
             </div>
