@@ -65,12 +65,10 @@ const Approuter = () => {
           <Route path="/editblog" element={<Editblog />} />
           <Route path="/blogview" element={<BlogView />} />
           {/* Settings */}
-
           <Route
             path="/settingschangepassword"
             element={<SettingsChangePassword />}
           />
-
           {/* Doctor  */}
           <Route path="/meetinglist" element={<MeetingList />} />
           <Route path="/add-meeting" element={<AddMeeting />} />
