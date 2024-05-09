@@ -30,9 +30,11 @@ import EditMeeting from "./components/meeting/EditMeeting";
 import ParticipentList from "./components/patients/ParticipentList";
 // import AddPatients from "./components/patients/AddPatients";
 import EditParticipent from "./components/patients/EditParticipent";
-import AppoinmentList from "./components/appoinments/AppoinmentList";
-import AddAppoinments from "./components/appoinments/AddAppoinments";
-import EditAppoinments from "./components/appoinments/EditAppoinments";
+//Landing Page
+ //Hero Section
+import HeroSection from "./components/Landing Page/Hero Section/HeroSection";
+import EditHeroSection from "./components/Landing Page/Hero Section/EditHeroSection";
+// import EditAppoinments from "./components/appoinments/EditAppoinments";
 //DoctorSchedule
 import ScheduleList from "./components/doctorschedule/ScheduleList";
 
@@ -172,10 +174,12 @@ const Approuter = () => {
           <Route path="/participentlist" element={<ParticipentList />} />
           {/* <Route path="/addpatients" element={<AddPatients />} /> */}
           <Route path="/editparticipent" element={<EditParticipent />} />
-          {/* Appoinments */}
-          <Route path="/appoinmentlist" element={<AppoinmentList />} />
-          <Route path="/addappoinments" element={<AddAppoinments />} />
-          <Route path="/editappoinments" element={<EditAppoinments />} />
+         {/* Landing Page */}
+
+            {/* Hero Section */}
+          <Route path="/herosection" element={<HeroSection />} />
+          <Route path="/editherosection" element={<EditHeroSection />} />
+
           {/* DoctorSchedule */}
           <Route path="/schedulelist" element={<ScheduleList />} />
           <Route path="/addschedule" element={<AddSchedule />} />
