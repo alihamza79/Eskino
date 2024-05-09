@@ -8,14 +8,50 @@ const AddAdmin = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    let tempErrors = {};
+    let formIsValid = true;
+
+    // Name validation
+    if (!name) {
+      formIsValid = false;
+      tempErrors["name"] = "Cannot be empty";
+    }
+
+    // Email validation
+    if (!email) {
+      formIsValid = false;
+      tempErrors["email"] = "Cannot be empty";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      formIsValid = false;
+      tempErrors["email"] = "Email is not valid";
+    }
+
+    // Password validation
+    if (!password) {
+      formIsValid = false;
+      tempErrors["password"] = "Cannot be empty";
+    } else if (password.length < 6) {
+      formIsValid = false;
+      tempErrors["password"] = "Password must be at least 6 characters long";
+    }
+
+    setErrors(tempErrors);
+    return formIsValid;
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submit action
-    console.log("Submitted Data:", { name, email, password });
-
-    setName("");
-    setEmail("");
-    setPassword("");
+    event.preventDefault();
+    if (validate()) {
+      console.log("Submitted Data:", { name, email, password });
+      // Clear the form
+      setName("");
+      setEmail("");
+      setPassword("");
+      setErrors({});
+    }
   };
 
   return (
@@ -58,6 +94,11 @@ const AddAdmin = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                           />
+                          {errors.name && (
+                            <div className="error text-danger">
+                              {errors.name}
+                            </div>
+                          )}
                         </div>
                       </div>
                       <div className="col-12 col-md-6">
@@ -71,6 +112,11 @@ const AddAdmin = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                           />
+                          {errors.email && (
+                            <div className="error text-danger">
+                              {errors.email}
+                            </div>
+                          )}
                         </div>
                       </div>
                       <div className="col-12 col-md-6">
@@ -84,6 +130,11 @@ const AddAdmin = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                           />
+                          {errors.password && (
+                            <div className="error text-danger">
+                              {errors.password}
+                            </div>
+                          )}
                         </div>
                       </div>
                       <div className="col-12">

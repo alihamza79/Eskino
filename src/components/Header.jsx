@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 // import "../../src/assets/js/app";
 // import { baricon1, imguser, logo, noteicon, noteicon1, searchnormal, settingicon01, user06 } from './imagepath';
@@ -22,8 +22,10 @@ const Header = () => {
 
   const handlesidebarmobilemenu = () => {
     document.body.classList.toggle("slide-nav");
-    document.getElementsByTagName("html")[0].classList.toggle('menu-opened');
-    document.getElementsByClassName("sidebar-overlay")[0].classList.toggle("opened");
+    document.getElementsByTagName("html")[0].classList.toggle("menu-opened");
+    document
+      .getElementsByClassName("sidebar-overlay")[0]
+      .classList.toggle("opened");
   };
 
   const openDrawer = () => {
@@ -65,7 +67,12 @@ const Header = () => {
         <Link id="toggle_btn" to="#" onClick={handlesidebar}>
           <img src={baricon} alt="" />
         </Link>
-        <Link id="mobile_btn" className="mobile_btn float-start" to="#" onClick={handlesidebarmobilemenu}>
+        <Link
+          id="mobile_btn"
+          className="mobile_btn float-start"
+          to="#"
+          onClick={handlesidebarmobilemenu}
+        >
           <img src={baricon1} alt="" />
         </Link>
         <div className="top-nav-search mob-view">
@@ -99,7 +106,7 @@ const Header = () => {
                   <li className="notification-message">
                     <Link to="/user-activity">
                       <div className="media">
-                      <span className="avatar">V</span>
+                        <span className="avatar">V</span>
                         <div className="media-body">
                           <p className="noti-details">
                             <span className="noti-title">John Doe</span> added
@@ -242,8 +249,8 @@ const Header = () => {
               <Link className="dropdown-item" to="/edit-profile">
                 Edit Profile
               </Link>
-              <Link className="dropdown-item" to="/settings">
-                Settings
+              <Link className="dropdown-item" to="/settingschangepassword">
+                Change Password
               </Link>
               <Link className="dropdown-item" to="/login">
                 Logout
@@ -365,7 +372,10 @@ const Header = () => {
                       <span className="avatar">C</span>
                     </div>
                     <div className="list-body">
-                      <span className="message-author"> Catherine Manseau </span>
+                      <span className="message-author">
+                        {" "}
+                        Catherine Manseau{" "}
+                      </span>
                       <span className="message-time">12:28 AM</span>
                       <div className="clearfix"></div>
                       <span className="message-content">
