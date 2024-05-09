@@ -60,8 +60,7 @@ const Header = () => {
       <div className="header">
         <div className="header-left">
           <Link to="/admin-dashboard" className="logo">
-            <img src={logo} width={35} height={35} alt="" />{" "}
-            <span>Pre Clinic</span>
+            <img src={logo} width={35} height={35} alt="" /> <span>Eskino</span>
           </Link>
         </div>
         <Link id="toggle_btn" to="#" onClick={handlesidebar}>
