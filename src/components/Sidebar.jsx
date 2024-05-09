@@ -160,18 +160,6 @@ const Sidebar = (props) => {
                         Edit Meeting
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "doctor-profile"
-                            ? "active"
-                            : ""
-                        }
-                        to="/doctorprofile"
-                      >
-                        Doctor Profile
-                      </Link>
-                    </li>
                   </ul>
                 </li>
                 <li className="submenu">
@@ -213,16 +201,6 @@ const Sidebar = (props) => {
                         Edit Participent
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "patient" ? "active" : ""
-                        }
-                        to="/patientsprofile"
-                      >
-                        Patients Profile
-                      </Link>
-                    </li>
                   </ul>
                 </li>
                 <li className="submenu">
@@ -257,50 +235,6 @@ const Sidebar = (props) => {
                         to="/addadmin"
                       >
                         Add Admin
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "staff-profile"
-                            ? "active"
-                            : ""
-                        }
-                        to="/staffprofile"
-                      >
-                        Staff Profile
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "leaves" ? "active" : ""
-                        }
-                        to="/leave"
-                      >
-                        Leaves
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "holidays" ? "active" : ""
-                        }
-                        to="/holiday"
-                      >
-                        Holidays
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className={
-                          props?.activeClassName === "attendance"
-                            ? "active"
-                            : ""
-                        }
-                        to="/attendence"
-                      >
-                        Attendance
                       </Link>
                     </li>
                   </ul>

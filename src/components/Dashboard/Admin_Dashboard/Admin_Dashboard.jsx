@@ -18,7 +18,6 @@ import {
   dep_icon5,
   empty_wallet,
   imagesend,
-  morning_img_01,
   profile_add,
   scissor,
   user001,
@@ -66,29 +65,11 @@ const Admin_Dashboard = () => {
               </div>
             </div>
             {/* /Page Header */}
-            <div className="good-morning-blk">
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="morning-user">
-                    <h2>
-                      Good Morning, <span>Daniel Bruk</span>
-                    </h2>
-                    <p>Have a nice day at work</p>
-                  </div>
-                </div>
-                <div className="col-md-6 position-blk">
-                  <div className="morning-img">
-                    <img src={morning_img_01}
-                     alt="#" />
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="row">
               <div className="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                 <div className="dash-widget">
                   <div className="dash-boxs comman-flex-center">
-                    <img src={calendar}  alt="#" />
+                    <img src={calendar} alt="#" />
                   </div>
                   <div className="dash-content dash-count flex-grow-1">
                     <h4>Appointments</h4>
@@ -98,8 +79,8 @@ const Admin_Dashboard = () => {
                     </h2>
                     <p>
                       <span className="passive-view">
-                        <i className="feather-arrow-up-right me-1" >
-                          <FeatherIcon icon="arrow-up-right"/>
+                        <i className="feather-arrow-up-right me-1">
+                          <FeatherIcon icon="arrow-up-right" />
                         </i>
                         40%
                       </span>{" "}
@@ -111,7 +92,7 @@ const Admin_Dashboard = () => {
               <div className="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                 <div className="dash-widget">
                   <div className="dash-boxs comman-flex-center">
-                    <img src={profile_add}  alt="#" />
+                    <img src={profile_add} alt="#" />
                   </div>
                   <div className="dash-content dash-count">
                     <h4>New Patients</h4>
@@ -122,7 +103,7 @@ const Admin_Dashboard = () => {
                       <span className="passive-view">
                         <i className="feather-arrow-up-right me-1">
                           <FeatherIcon icon="arrow-up-right" />
-                          </i>
+                        </i>
                         20%
                       </span>{" "}
                       vs last month
@@ -143,8 +124,8 @@ const Admin_Dashboard = () => {
                     <p>
                       <span className="negative-view">
                         <i className="feather-arrow-down-right me-1">
-                          <FeatherIcon icon="arrow-down-right"/>
-                          </i>
+                          <FeatherIcon icon="arrow-down-right" />
+                        </i>
                         15%
                       </span>{" "}
                       vs last month
@@ -165,8 +146,8 @@ const Admin_Dashboard = () => {
                     <p>
                       <span className="passive-view">
                         <i className="feather-arrow-up-right me-1">
-                          <FeatherIcon icon="arrow-up-right"/>
-                          </i>
+                          <FeatherIcon icon="arrow-up-right" />
+                        </i>
                         30%
                       </span>{" "}
                       vs last month
@@ -207,26 +188,34 @@ const Admin_Dashboard = () => {
                           options={year}
                           id="search-commodity"
                           components={{
-                            IndicatorSeparator: () => null
+                            IndicatorSeparator: () => null,
                           }}
                           styles={{
                             control: (baseStyles, state) => ({
                               ...baseStyles,
-                              borderColor: state.isFocused ?'none' : '2px solid rgba(46, 55, 164, 0.1);',
-                               boxShadow: state.isFocused ? '0 0 0 1px #2e37a4' : 'none',
-                              '&:hover': {
-                                borderColor: state.isFocused ? 'none' : '2px solid rgba(46, 55, 164, 0.1)',
+                              borderColor: state.isFocused
+                                ? "none"
+                                : "2px solid rgba(46, 55, 164, 0.1);",
+                              boxShadow: state.isFocused
+                                ? "0 0 0 1px #2e37a4"
+                                : "none",
+                              "&:hover": {
+                                borderColor: state.isFocused
+                                  ? "none"
+                                  : "2px solid rgba(46, 55, 164, 0.1)",
                               },
-                              borderRadius: '10px',
+                              borderRadius: "10px",
                               fontSize: "14px",
-                                minHeight: "45px",
+                              minHeight: "45px",
                             }),
                             dropdownIndicator: (base, state) => ({
                               ...base,
-                              transform: state.selectProps.menuIsOpen ? 'rotate(-180deg)' : 'rotate(0)',
-                              transition: '250ms',
-                              width: '35px',
-                              height: '35px',
+                              transform: state.selectProps.menuIsOpen
+                                ? "rotate(-180deg)"
+                                : "rotate(0)",
+                              transition: "250ms",
+                              width: "35px",
+                              height: "35px",
                             }),
                           }}
                         />
@@ -260,7 +249,7 @@ const Admin_Dashboard = () => {
                   <div className="card-body">
                     <div className="activity-top">
                       <div className="activity-boxs comman-flex-center">
-                        <img src={dep_icon1} alt="#"/>
+                        <img src={dep_icon1} alt="#" />
                       </div>
                       <div className="departments-list">
                         <h4>General Physician</h4>
@@ -396,7 +385,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -456,7 +446,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -516,7 +507,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -576,7 +568,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -635,7 +628,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -739,7 +733,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -798,7 +793,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -857,7 +853,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -916,7 +913,8 @@ const Admin_Dashboard = () => {
                                     data-bs-toggle="modal"
                                     data-bs-target="#delete_patient"
                                   >
-                                    <i className="fa fa-trash-alt m-r-5"></i> Delete
+                                    <i className="fa fa-trash-alt m-r-5"></i>{" "}
+                                    Delete
                                   </Link>
                                 </div>
                               </div>
@@ -930,44 +928,60 @@ const Admin_Dashboard = () => {
               </div>
             </div>
           </div>
-          <div id="delete_patient" className="modal fade delete-modal" role="dialog">
-    <div className="modal-dialog modal-dialog-centered">
-      <div className="modal-content">
-        <div className="modal-body text-center">
-          <img src={imagesend} alt="#" width={50} height={46} />
-          <h3>Are you sure want to delete this ?</h3>
-          <div className="m-t-20">
-            {" "}
-            <Link to="#" className="btn btn-white me-2" data-bs-dismiss="modal">
-              Close
-            </Link>
-            <button type="submit" className="btn btn-danger">
-              Delete
-            </button>
+          <div
+            id="delete_patient"
+            className="modal fade delete-modal"
+            role="dialog"
+          >
+            <div className="modal-dialog modal-dialog-centered">
+              <div className="modal-content">
+                <div className="modal-body text-center">
+                  <img src={imagesend} alt="#" width={50} height={46} />
+                  <h3>Are you sure want to delete this ?</h3>
+                  <div className="m-t-20">
+                    {" "}
+                    <Link
+                      to="#"
+                      className="btn btn-white me-2"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </Link>
+                    <button type="submit" className="btn btn-danger">
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              id="delete_patient"
+              className="modal fade delete-modal"
+              role="dialog"
+            >
+              <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content">
+                  <div className="modal-body text-center">
+                    <img src={imagesend} alt="#" width={50} height={46} />
+                    <h3>Are you sure want to delete this ?</h3>
+                    <div className="m-t-20">
+                      {" "}
+                      <Link
+                        to="#"
+                        className="btn btn-white me-2"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </Link>
+                      <button type="submit" className="btn btn-danger">
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div id="delete_patient" className="modal fade delete-modal" role="dialog">
-    <div className="modal-dialog modal-dialog-centered">
-      <div className="modal-content">
-        <div className="modal-body text-center">
-          <img src={imagesend} alt="#" width={50} height={46} />
-          <h3>Are you sure want to delete this ?</h3>
-          <div className="m-t-20">
-            {" "}
-            <Link to="#" className="btn btn-white me-2" data-bs-dismiss="modal">
-              Close
-            </Link>
-            <button type="submit" className="btn btn-danger">
-              Delete
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
         </div>
       </>
     </>

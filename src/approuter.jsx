@@ -26,12 +26,10 @@ import AddAsset from "./components/assests/AddAsset";
 import MeetingList from "./components/meeting/MeetingList";
 import AddMeeting from "./components/meeting/AddMeeting";
 import EditMeeting from "./components/meeting/EditMeeting";
-import DoctorProfile from "./components/meeting/DoctorProfile";
 //Patients...
 import ParticipentList from "./components/patients/ParticipentList";
 // import AddPatients from "./components/patients/AddPatients";
 import EditParticipent from "./components/patients/EditParticipent";
-import PatientsProfile from "./components/patients/PatientsProfile";
 import AppoinmentList from "./components/appoinments/AppoinmentList";
 import AddAppoinments from "./components/appoinments/AddAppoinments";
 import EditAppoinments from "./components/appoinments/EditAppoinments";
@@ -46,7 +44,8 @@ import AddDepartment from "./components/department/AddDepartment";
 import EditDepartment from "./components/department/EditDepartment";
 import AdminList from "./components/staff/AdminList";
 import AddAdmin from "./components/staff/Add-Admin";
-import StaffProfile from "./components/staff/StaffProfile";
+import EditAdmin from "./components/staff/EditAdmin";
+
 import ProvidentFund from "./components/accounts/ProvidentFund";
 import ForgotPassword from "./components/pages/login/ForgotPassword";
 import Signup from "./components/pages/login/Signup";
@@ -59,11 +58,7 @@ import Add_Expense from "./components/accounts/Add_Expense";
 import Taxes from "./components/accounts/Taxes";
 import Add_Tax from "./components/accounts/Add_Tax";
 import EmployeeSalary from "./components/Payroll/EmployeeSalary/EmployeeSalary";
-
 import Inbox from "./components/email/Inbox";
-import AddLeave from "./components/staff/AddLeave";
-import Attendence from "./components/staff/Attendence";
-import Leave from "./components/staff/Leave";
 import ComposeMail from "./components/email/ComposeMail";
 import MailView from "./components/email/MailView";
 import UserActivity from "./components/activity/UserActivity";
@@ -71,9 +66,6 @@ import AddEmployeeSalary from "./components/Payroll/EmployeeSalary/AddEmployeeSa
 import Chat from "./components/Chat/Chat";
 import VoiceCall from "./components/Call/VoiceCall";
 import VideoCall from "./components/Call/VideoCall";
-import EditStaff from "./components/staff/EditStaff";
-import EditLeave from "./components/staff/EditLeave";
-import Holiday from "./components/staff/Holiday";
 import Add_ProviderFund from "./components/accounts/Add_ProviderFund";
 import ExpensesReport from "./components/ExpenseReport/Expenses/ExpensesReport";
 import AddExpenses from "./components/ExpenseReport/Expenses/AddExpenses";
@@ -115,9 +107,7 @@ import BlankPage from "./components/pages/login/BlankPage";
 // import Doctor_Dashboard from "./components/Dashboard/Doctor_Dashboard/Doctor_Dashboard";
 import Admin_Dashboard from "./components/Dashboard/Admin_Dashboard/Admin_Dashboard";
 // import Patient_Dashboard from "./components/Dashboard/Patient_Dashboard/Patient_Dashboard";
-import Doctor_Settings from "./components/meeting/Doctor_Settings";
-import Patient_Settings from "./components/patients/Patient_Settings";
-import Staff_Settings from "./components/staff/Staff-Settings";
+
 import Edit_Provident from "./components/accounts/Edit_Provident";
 import Edit_Taxes from "./components/accounts/Edit_Taxes";
 import Edit_Expenses from "./components/ExpenseReport/Expenses/Edit_Expenses";
@@ -177,14 +167,11 @@ const Approuter = () => {
           <Route path="/meetinglist" element={<MeetingList />} />
           <Route path="/add-meeting" element={<AddMeeting />} />
           <Route path="/editmeeting" element={<EditMeeting />} />
-          <Route path="/doctorprofile" element={<DoctorProfile />} />
-          <Route path="/doctor-setting" element={<Doctor_Settings />} />
+
           {/* Patients */}
           <Route path="/participentlist" element={<ParticipentList />} />
           {/* <Route path="/addpatients" element={<AddPatients />} /> */}
           <Route path="/editparticipent" element={<EditParticipent />} />
-          <Route path="/patientsprofile" element={<PatientsProfile />} />
-          <Route path="/patient-settings" element={<Patient_Settings />} />
           {/* Appoinments */}
           <Route path="/appoinmentlist" element={<AppoinmentList />} />
           <Route path="/addappoinments" element={<AddAppoinments />} />
@@ -200,14 +187,8 @@ const Approuter = () => {
           {/* Staff */}
           <Route path="/adminlist" element={<AdminList />} />
           <Route path="/addadmin" element={<AddAdmin />} />
-          <Route path="/editstaff" element={<EditStaff />} />
-          <Route path="/staffprofile" element={<StaffProfile />} />
-          <Route path="/leave" element={<Leave />} />
-          <Route path="/add-leave" element={<AddLeave />} />
-          <Route path="/editleave" element={<EditLeave />} />
-          <Route path="/attendence" element={<Attendence />} />
-          <Route path="/holiday" element={<Holiday />} />
-          <Route path="/staff-settings" element={<Staff_Settings />} />
+          <Route path="/editadmin" element={<EditAdmin />} />
+
           {/* Accounts */}
           <Route path="/providentfund" element={<ProvidentFund />} />
           <Route path="/add-providerfund" element={<Add_ProviderFund />} />

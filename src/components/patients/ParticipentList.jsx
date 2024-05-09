@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
-import { blogimg2, imagesend } from "../imagepath";
+import { blogimg2, imagesend, refreshicon, searchnormal } from "../imagepath";
 const ParticipantList = () => {
   const datasource = [
     {
@@ -245,9 +245,41 @@ const ParticipantList = () => {
               </div>
             </div>
           </div>
+
           <div className="row">
             <div className="col-sm-12">
               <div className="card">
+                <div className="page-table-header mb-2">
+                  <div className="row align-items-center">
+                    <div className="col">
+                      <div className="doctor-table-blk">
+                        <h3>Participent List</h3>
+                        <div className="doctor-search-blk">
+                          <div className="top-nav-search table-search-blk">
+                            <form>
+                              <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Search here"
+                              />
+                              <Link className="btn">
+                                <img src={searchnormal} alt="#" />
+                              </Link>
+                            </form>
+                          </div>
+                          <div className="add-group">
+                            <Link
+                              to="#"
+                              className="btn btn-primary doctor-refresh ms-2"
+                            >
+                              <img src={refreshicon} alt="#" />
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div className="card-body">
                   <Table
                     columns={columns}

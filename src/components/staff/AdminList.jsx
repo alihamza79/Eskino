@@ -125,7 +125,6 @@ const AdminList = () => {
     {
       title: "Name",
       dataIndex: "Name",
-      render: (text) => <Link to="/participentlist">{text}</Link>,
       sorter: (a, b) => a.Name.length - b.Name.length,
     },
     {
@@ -153,7 +152,7 @@ const AdminList = () => {
                 <i className="fas fa-ellipsis-v" />
               </Link>
               <div className="dropdown-menu dropdown-menu-end">
-                <Link className="dropdown-item" to="/editmeeting">
+                <Link className="dropdown-item" to="/editadmin">
                   <i className="far fa-edit me-2" />
                   Edit
                 </Link>
@@ -226,7 +225,7 @@ const AdminList = () => {
                             </div>
                             <div className="add-group">
                               <Link
-                                to="/add-meeting"
+                                to="/addadmin"
                                 className="btn btn-primary add-pluss ms-2"
                               >
                                 <img src={plusicon} alt="#" />
